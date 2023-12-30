@@ -25,10 +25,10 @@ This repository contains a simple LightBox for images built using Astro, a moder
 3. Instala las dependencias:
    `pnpm install`
 
-4. Ejecuta el proyecto:
+4. Run the project:
    `pnpm dev`
 
-Visita `http://localhost:4321` en tu navegador para ver la aplicación en funcionamiento.
+Visit `http://localhost:4321` in your browser to see the application working.
 
 ## Contributions
 
