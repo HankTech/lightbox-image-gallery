@@ -14,8 +14,14 @@
             dialog?.classList.add('show')
 
             if (dialogImage) {
+                //set iamge
                 const dataImage = item.getAttribute('data-image')
                 dialogImage.setAttribute('src', `${dataImage}`);
+
+                //  show image when `src` is set
+                dialogImage.addEventListener('load', () => {
+                    dialogImage.classList.add('show')
+                })
             }
 
             if (dialogTitle) {
@@ -30,6 +36,10 @@
         const closeModal = () => {
             document.body.removeAttribute('style')
             dialog?.classList.remove('show')
+            
+            if (dialogImage) {
+                dialogImage.classList.remove('show')
+            }
 
             setTimeout(() => {
                 modal?.classList.remove('show')
@@ -148,6 +158,12 @@
                 height: 100%;
                 object-fit: cover;
                 max-height: 500px;
+                opacity: 0;
+                transition: opacity 0.4s;
+
+                &.show {
+                    opacity: 1;
+                }
 
                 @media screen and (width >= 768px) {
                     min-height: 500px;
