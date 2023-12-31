@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains a simple LightBox for images built using Astro, a modern front-end site builder that offers blazing fast performance.
+This repository contains a web with a simple LightBox for images built using Astro, a modern front-end site builder that offers blazing fast performance.
 
 ## Features
 
