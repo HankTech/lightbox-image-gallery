@@ -1,5 +1,8 @@
 # Lightbox Image Gallery
 
+![image](https://github.com/HankTech/lightbox-image-gallery/assets/45723675/5f0305c2-d4bb-4d4e-ab53-bb4a2a8d8a39)
+
+
 ## Description
 
 This repository contains a web with a simple LightBox for images built using Astro, a modern front-end site builder that offers blazing fast performance.
