@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import GalleryItem from '../components/GalleryItem.astro'
+import Modal from '../components/Modal.astro'
 
 //	images
 import ImageDenji from '../assets/denji.webp'
@@ -21,65 +22,75 @@ import ImageKatanaManMin from '../assets/katana-man-min.webp'
 
 <Layout title="Lightbox Image Gallery">
 	<section class="gallery">
-		<div class="gallery__block">
+		<h1 class="gallery__block">
 			Grid Gallery
-		</div>
+		</h1>
 
 		<GalleryItem
 			title='Denji'
 			image={ImageDenjiMin}
-			dataImage={ImageDenji}
+			dataImage={ImageDenji.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 		<GalleryItem
 			title='Power'
 			image={ImagePowerMin}
-			dataImage={ImagePower}
+			dataImage={ImagePower.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 		<GalleryItem
 			title='Aki'
 			image={ImageAkiMin}
-			dataImage={ImageAki}
+			dataImage={ImageAki.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 		<GalleryItem
 			title='Himeno'
 			image={ImageHimenoMin}
-			dataImage={ImageHimeno}
+			dataImage={ImageHimeno.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 		<GalleryItem
 			title='kobeni'
 			image={ImagekobeniMin}
-			dataImage={Imagekobeni}
+			dataImage={Imagekobeni.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 		<GalleryItem
 			title='Makima'
 			image={ImageMakimaMin}
-			dataImage={ImageMakima}
+			dataImage={ImageMakima.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 		<GalleryItem
 			title='Katana Man'
 			image={ImageKatanaManMin}
-			dataImage={ImageKatanaMan}
+			dataImage={ImageKatanaMan.src}
 			dataDescription='Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, repudiandae eum veritatis quo labore eius cupiditate laudantium quae delectus. Doloremque velit fuga similique ducimus aut temporibus, atque accusantium consequatur dignissimos?'
 		/>
 	</section>
+
+	<Modal />
 </Layout>
 
 <style>
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(4, 25vh);
-		grid-template-rows: repeat(2, 25vh);
+		grid-template-columns: repeat(2, 25vh);
+		grid-template-rows: repeat(4, 25vh);
 		gap: 16px;
-		height: 100vh;
+		height: 100%;
 		width: 100%;
 		align-content: center;
 		justify-content: center;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		@media screen and (width >= 768px) {
+			grid-template-columns: repeat(4, 25vh);
+			grid-template-rows: repeat(2, 25vh);
+			height: 100vh;
+		}
 
 		.gallery__block {
 			background-color: #000;
